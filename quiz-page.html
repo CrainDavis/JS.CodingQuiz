@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--viewport width-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!--font link-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <!--Bootstrap link (for footer)-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--CSS link-->
+        <link href="assets/styles.css" rel="stylesheet">
+        <!--page title-->
+        <title>Coding Quiz: Play Quiz</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="quizPage" class="flex-center flex-column">
+                <!--Heads Up Display (for question#, score, and timer-->
+                <div id="hud">
+                    <!--question number-->
+                    <div id="hud-item">
+                        <h6 class="hud-prefix">Question</h6>
+                        <h3 id="questionCounter" class="hud-main-text">0 / 10</h3>
+                    </div>
+                    <!--score counter-->
+                    <div id="hud-item">
+                        <h6 class="hud-prefix">Score</h6>
+                        <h3 id="score" class="hud-main-text">0</h3>
+                    </div>
+                    <!--countdown timer-->
+                    <div id="hud-item">
+                        <h6 class="hud-prefix">Timer</h6>
+                        <h3 id="countdownTimer" class="hud-main-text">1 : 00</h3>
+                    </div>
+                </div>
+                <br><br>
+                <!--question section (added via JavaScript)-->
+                <h3 id="question">QUESTION HERE</h3>
+                <br>
+                <!--answer section (added via JavaScript)-->
+                <div class="choice-container">
+                    <button class="choice-text answer-btn btn" data-number="1">A</button>
+                    <button class="choice-text answer-btn btn" data-number="2">B</button>
+                    <button class="choice-text answer-btn btn" data-number="3">C</button>
+                    <button class="choice-text answer-btn btn" data-number="4">D</button>
+                </div>
+            </div>
+        </div>
+        <!--footer (via Bootstrap)-->
+        <nav class="navbar fixed-bottom navbar-light" style="background-color: #e3f2fd;">
+            <h6 id="footer">&copy; Chyna Davis</h6>
+        </nav>
+    </body>
+    <!--JavaScript link-->
+    <script src="assets/script.js"></script>
+</html>

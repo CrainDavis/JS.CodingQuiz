@@ -1,0 +1,293 @@
+* { /* ALL PAGES; entire document */
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body { /* ALL PAGES; entire body */
+    background-color: #2b3c4c;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* default; xs DEVICES less than 576px (note: smallest devices are ~320px) */
+h1 { /* ALL PAGES; h tags */
+    font-size: 27px;
+    color: #2b3c4c;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 24px;
+    color: #2b3c4c;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 21px;
+    color: #2b3c4c;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 18px;
+    color: #2b3c4c;
+    margin-bottom: 10px;
+}
+h5 {
+    font-size: 15px;
+    color: #2b3c4c;
+    margin-bottom: 10px;
+}
+h6 {
+    font-size: 12px;
+    color: #2b3c4c;
+    margin-bottom: 10px;
+}
+.container { /* ALL PAGES; containers */
+    width: 800px;
+    max-width: 80%;
+    background-color: #e9f4ff;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+#hud { /* quiz-page; Heads Up Display */
+    display: flex;
+    justify-content: space-around;
+}
+.hud-prefix {
+    text-align: center;
+}
+.hud-main-text {
+    color: #1f8fff;
+    font-weight: bold;
+    text-align: center;
+}
+.link-btn, /* ALL PAGES; buttons & links */
+.answer-btn, 
+.submit-btn,
+.clearAll-btn {
+    width: 100%;
+    border: 3px solid #2b3c4c;
+    background-color: #82b4e5;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #e9f4ff;
+    outline: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.btn:hover { 
+    border: 3px solid #1f8fff;
+    color: #1f8fff;
+}
+.btn[disabled]:hover {
+    border: 3px solid #2b3c4c;
+    color: #e9f4ff;
+}
+.form-input { /* submitHighscores-page; input box */
+    width: 100%;
+    border: 3px solid #82b4e5;
+    background-color: #f4f9ff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #82b4e5;
+    outline: none;
+    text-align: center;
+}
+::placeholder {
+    color: #82b4e5;
+}
+.highscoreSubmit { /* highscores-page; submit button */
+    text-align: center;
+    width: 30%;
+}
+.highscoreRecord { /* highscores-page; highscore recorder main box */
+    width: 100%;
+    text-align: center;
+    border: 3px solid #82b4e5;
+    background-color: #1f8fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #f4f9ff;
+    outline: none;
+}
+.highscore-item {
+    list-style: none;
+    display: inline;
+}
+.correct { /* quiz-page; button-color: correct */
+    background-color: #00b31d;
+}
+.incorrect { /* quiz-page; button-color: incorrect */
+    background-color: #ec2e2e;
+}
+.hide { /* hide from view */
+    display: none;
+}
+#footer { /* footer style */
+    width: 100%;
+    font-size: 15px;
+    color: #2b3c4c;
+    text-align: center;
+}
+
+/* ///////////////////////// Media Queries ///////////////////////// */
+
+/* SIZING FOR sm SCREEN SIZES; 576px - 767px */
+@media (min-width: 576px) {
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    .container {
+        width: 800px;
+        max-width: 80%;
+    }
+    .link-btn, 
+    .answer-btn, 
+    .submit-btn,
+    .clearAll-btn {
+        font-size: 16px;
+    }
+    .form-input {
+        font-size: 14px;
+    }
+    .highscoreRecord {
+        font-size: 16px;
+    }
+}
+
+/* SIZING FOR md SCREEN SIZES; 768px - 991px */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 28px;
+    }
+    h5 {
+        font-size: 24px;
+    }
+    h6 {
+        font-size: 20px;
+    }
+    .container {
+        width: 800px;
+        max-width: 80%;
+    }
+    .link-btn, 
+    .answer-btn, 
+    .submit-btn,
+    .clearAll-btn {
+        font-size: 24px;
+    }
+    .form-input {
+        font-size: 20px;
+    }
+    .highscoreRecord {
+        font-size: 20px;
+    }
+}
+
+/* SIZING FOR lg SCREEN SIZES; 992px - 1199px */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    h4 {
+        font-size: 35px;
+    }
+    h5 {
+        font-size: 30px;
+    }
+    h6 {
+        font-size: 25px;
+    }
+    .container {
+        width: 800px;
+        max-width: 80%;
+    }
+    .link-btn, 
+    .answer-btn, 
+    .submit-btn,
+    .clearAll-btn {
+        font-size: 30px;
+    }
+    .form-input {
+        font-size: 25px;
+    }
+    .highscoreRecord {
+        font-size: 25px;
+    }
+}
+
+/* SIZING FOR xl SCREEN SIZES; 1200px and up */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    h4 {
+        font-size: 35px;
+    }
+    h5 {
+        font-size: 30px;
+    }
+    h6 {
+        font-size: 25px;
+    }
+    .container {
+        width: 800px;
+        max-width: 80%;
+    }
+    .link-btn, 
+    .answer-btn, 
+    .submit-btn,
+    .clearAll-btn {
+        font-size: 30px;
+    }
+    .form-input {
+        font-size: 25px;
+    }
+    .highscoreRecord {
+        font-size: 25px;
+    }
+}

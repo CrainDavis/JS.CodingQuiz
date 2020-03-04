@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--viewport width-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!--font link-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <!--Bootstrap link (for footer)-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--CSS link-->
+        <link href="assets/styles.css" rel="stylesheet">
+        <!--page title-->
+        <title>Coding Quiz: Submit Highscores</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="highscore-page" class="flex-center flex-column">
+                <!--submit score section-->
+                <div class="scoreSubmit">
+                    <!--section header-->
+                    <h1>SUBMIT SCORE</h1>
+                    <h3 id="finalScore">your score: <span style="color:#1f8fff;">0</span></h3>
+                    <!--input form for user's initials-->
+                    <form>
+                        <input type="name" class="form-input" id="name-input username" placeholder="your initials">
+                    </form>
+                    <br>
+                    <!--submission button-->
+                    <button type="submit" class="submit-btn btn" id="submit-btn saveScoreBtn">SAVE SCORE</button>
+                    <br><br><hr><br>
+                    <!--play again button-->
+                    <a class="link-btn btn" href="index.html">PLAY AGAIN</a>
+                </div>
+            </div>
+        </div>
+\        <!--footer (via Bootstrap)-->
+        <nav class="navbar fixed-bottom navbar-light" style="background-color: #e3f2fd;">
+            <h6 id="footer">&copy; Chyna Davis</h6>
+        </nav>
+    </body>
+    <!--JavaScript link-->
+    <script src="assets/script.js"></script>
+</html>

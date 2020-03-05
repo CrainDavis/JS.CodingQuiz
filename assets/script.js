@@ -3,11 +3,13 @@ var question = document.getElementById("question"); // quiz-page line 38
 var choices = Array.from(document.getElementsByClassName("choice-text")); // quiz-page line 42-45
 var questionCounterText = document.getElementById("questionCounter"); // quiz-page HUD line 23
 var scoreText = document.getElementById("score"); // quiz-page HUD line 28
-var countdownTimerText = document.getElementById("countdownTimer"); // quiz-page HUD line 33
+var timeElement = document.getElementById("countdownTimer"); // quiz-page HUD line 33
 
 var currentQuestion = {}; // object for questions
 var acceptingAnswers = false; // create short delay between questions
 var score = 0; // keep score
+var timeLeft = 61; // countdown timer starts with 60 seconds on the clock
+var endTime = 0; // time over at 0 seconds
 var questionCounter = 0; // keep track of question number
 var availableQuestions = []; // begin with full questions array, and remove them from this variable as they are answered by user
 var correctScore = 10; // points for each correct answer; incremented
@@ -166,5 +168,27 @@ function addToScore(points) { // function that increases the score each time use
     scoreText.innerText = score; // changes inner text to reflect this score change
 }
 // ADD TO SCORE FUNCTION finish //
+
+// TIMER FUNCTION start //
+function setTime() {
+    var timerInterval = setInterval(function() {
+        timeLeft--;
+        timeElement.textContent = timeLeft;
+
+        if(timeLeft === 0) {
+            clearInterval(timerInterval);
+            return window.location.assign("gameover-page.html");
+        }
+    }, 1000);
+}
+
+function sendMessage() {
+    timeElement.textContent = 0;
+    clearTimeout();
+}
+
+setTime();
+sendMessage();
+// TIMER FUNCTION finish //
 
 startQuiz(); // call on startQuiz function; quiz will start

@@ -103,24 +103,34 @@ h6 {
 ::placeholder {
     color: #82b4e5;
 }
-.highscoreSubmit { /* highscores-page; submit button */
+.highscoreSubmit { /* submitHighscores-page; submit button */
     text-align: center;
     width: 30%;
 }
-.highscoreRecord { /* highscores-page; highscore recorder main box */
+.highscoreRecord { /* viewHighscores-page; highscore recorder main box */
     width: 100%;
     text-align: center;
-    border: 3px solid #82b4e5;
+    border: 3px solid #2b3c4c;
+    background-color: #2b3c4c;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+    outline: none;
+}
+.highscore-item { /* viewHighscores-page; individual player submissions */
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    border: 3px solid #f4f9ff;
     background-color: #1f8fff;
     border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 5px 10px;
     font-size: 15px;
     color: #f4f9ff;
     outline: none;
-}
-.highscore-item {
-    list-style: none;
-    display: inline;
+
 }
 .correct { /* quiz-page; button-color: correct */
     background-color: #00b31d;
@@ -173,7 +183,7 @@ h6 {
     .form-input {
         font-size: 14px;
     }
-    .highscoreRecord {
+    .highscore-item {
         font-size: 16px;
     }
 }
@@ -211,8 +221,8 @@ h6 {
     .form-input {
         font-size: 20px;
     }
-    .highscoreRecord {
-        font-size: 20px;
+    .highscore-item {
+        font-size: 24px;
     }
 }
 
@@ -249,8 +259,8 @@ h6 {
     .form-input {
         font-size: 25px;
     }
-    .highscoreRecord {
-        font-size: 25px;
+    .highscore-item {
+        font-size: 30px;
     }
 }
 
@@ -287,7 +297,7 @@ h6 {
     .form-input {
         font-size: 25px;
     }
-    .highscoreRecord {
-        font-size: 25px;
+    .highscore-item {
+        font-size: 30px;
     }
 }

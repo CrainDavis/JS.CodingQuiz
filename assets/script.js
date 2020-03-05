@@ -16,7 +16,7 @@ var totalQuestions = 10; // total number of questions user will answer; the numb
 /////////////////////////////////// QUESTIONS ARRAY ///////////////////////////////////
 var questions = [ // questions array with 10 questions as 10 objects; each object has a question, four choices, and the answer indicating which choice is the correct one
     {
-        question: "What are symbols such as (+ * - / %) called?",
+        question: "(+ * - / %)\nWhat are these symbols called?",
         choice1: "arithmetic operators",
         choice2: "arithmetic symbols",
         choice3: "mathematic signs",
@@ -131,7 +131,7 @@ function newQuestion() {
 };
 // NEW QUESTION FUNCTION finish //
 
-// forEach FUNCTION for ANSWER CHOICES start //
+// ANSWER CHOICES FUNTION start //
 choices.forEach( (choice) => { // sets which ones are correct/incorrect, and uses CSS to change button colors
     choice.addEventListener("click", e => {
         if(!acceptingAnswers) return; // prevent user from answering question before page is done loading
@@ -158,7 +158,7 @@ choices.forEach( (choice) => { // sets which ones are correct/incorrect, and use
         }, 500); // gives a delay of 0.5 seconds
     });
 })
-// forEach FUNCTION for ANSWER CHOICES finish //
+// ANSWER CHOICES FUNTION finish //
 
 // ADD TO SCORE FUNCTION start //
 function addToScore(points) { // function that increases the score each time user answers a question correctly

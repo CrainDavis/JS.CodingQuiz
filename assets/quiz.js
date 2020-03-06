@@ -9,7 +9,7 @@ var questions = [
         answer: 1
     },
     {
-        question: "Which of the following is NOT used to hold values?",
+        question: "Which of the following CANNOT be used to declare a variable?",
         choice1: "let",
         choice2: "set",
         choice3: "var",
@@ -76,7 +76,7 @@ var questions = [
         question: "Which CANNOT be used in a conditional statement?",
         choice1: "if",
         choice2: "else if",
-        choice3: "or if",
+        choice3: "what if",
         choice4: "else",
         answer: 3
     }
@@ -92,7 +92,7 @@ var timeElement = document.getElementById("countdownTimer"); // quiz-page page-t
 var currentQuestion = {}; // object for questions
 var acceptingAnswers = false; // create short delay between questions
 var score = 0; // keep score
-var timeLeft = 61; // countdown timer starts with 60 seconds on the clock
+var timeLeft = 61; // countdown timer starts with 60 seconds on the clock; 61 is used here because the first decremented second does not appear to be displayed on the page due to slow rendering
 var questionCounter = 0; // keep track of question number
 var availableQuestions = []; // begin with full questions array, and remove them from this variable as they are answered by user
 var correctScore = 10; // points for each correct answer; incremented
@@ -103,12 +103,14 @@ var totalQuestions = 10; // total number of questions user will answer
 function startQuiz() { 
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions];
+    availableQuestions = [...questions]; 
     newQuestion();
 }
 
 // call on startQuiz function
 startQuiz();
+// call on the setTime Function
+setTime();
 
 // newQuestion Function: populates the inner text of the question and answer choices as the user goes through, increments the page-top stats, randomizes the question order and removes already-answered questions from array, ends the game after 10 questions, stores the user's score in local storage, and redirects the user to the submit highscores page
 function newQuestion() { 
@@ -124,7 +126,7 @@ function newQuestion() {
     currentQuestion = availableQuestions[questionIndex];
     question.textContent = currentQuestion.question;
 
-    choices.forEach( (choice) => {
+    choices.forEach( function(choice) {
         var number = choice.dataset["number"]; 
         choice.textContent = currentQuestion["choice" + number];
     });
@@ -134,9 +136,9 @@ function newQuestion() {
     acceptingAnswers = true;
 };
 
-// answerChoices Function: uses a forEach function for the 4 answer choices; prevents user from clicking any answer choices before page finishes loading, changes the CSS color of the buttons to show whether user's choice was correct or incorrect, uses a setTimeout Function to make this color effect last for 0.5 seconds before calling the newQuestion Function
-choices.forEach( (choice) => {
-    choice.addEventListener("click", e => {
+// answerChoices Function: uses a forEach function for the 4 answer choices; prevents user from clicking any answer choices before page finishes loading, changes the CSS color of the buttons to show whether user's choice was correct or incorrect, uses a setTimeout Function to make this color effect last for 0.2 seconds before calling the newQuestion Function. This function uses classes applied to decide whether the user's selected answer is correct or incorrect. The default is incorrect, and if the user chooses the correct answer, the answer's class will be changed through the classList.add() method. If the user selects the wrong answer, the class will remain as "incorrect", and the timePenalty function will be called, causing the timer to subtract 5 seconds.
+choices.forEach( function(choice) {
+    choice.addEventListener("click", function(e) {
         if(!acceptingAnswers) return;
 
         acceptingAnswers = false;
@@ -146,6 +148,8 @@ choices.forEach( (choice) => {
         var classToApply = "incorrect"; 
             if(selectedAnswer == currentQuestion.answer) {
                 classToApply = "correct"; 
+            } else {
+                timePenalty();
             }
 
         if(classToApply === "correct") { 
@@ -157,7 +161,7 @@ choices.forEach( (choice) => {
         setTimeout(function() { 
             selectedChoice.classList.remove(classToApply); 
             newQuestion(); 
-        }, 500);
+        }, 200);
     });
 })
 
@@ -177,8 +181,16 @@ function setTime() {
             clearInterval(timerInterval); 
             return window.location.assign("gameover-page.html"); 
         }
-    }, 1000);
+    }, 1000); // 1 Mississippi
 }
 
-// call on the setTime Function
-setTime();
+function timePenalty() {
+    timeLeft = timeLeft - 4; // though the penalty is said to be -5 seconds in the instructions, I use -4 here because the setTimeout Function takes about a second to finish
+}
+
+// =================================================================================
+// Resources:
+// James Q Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx".
+    // "Build a Quiz App (3) - Display Hard-Coded Questions"
+    // "Build a Quiz App (4) - Display Feedback for Correct/Incorrect Answers"
+    // "Build a Quiz App (5) - Create a Head's Up Display"

@@ -2,7 +2,7 @@
 var highscoreList = document.getElementById("highscoreList"); // ul
 var clearAllBtn = document.getElementById("clearAll-btn");
 
-// ===============================================================================
+/////////////////////////////////// FUNCTIONS ///////////////////////////////////
 
 var userScores = [];
 
@@ -32,8 +32,6 @@ function openPage() {
   
     renderHighscores();
   }
-
-// ===============================================================================
 
 // clearAllBtn function: adds event listener for the button, clears out the localStorage, and changes the inner HTML by showing the empty storage
 clearAllBtn.addEventListener("click", function(event) {

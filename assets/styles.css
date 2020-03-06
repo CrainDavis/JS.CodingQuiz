@@ -54,14 +54,14 @@ h6 {
     margin: 0 auto;
     text-align: center;
 }
-#hud { /* quiz-page; Heads Up Display */
+#quizStats { /* quiz-page; page-top quiz stats */
     display: flex;
     justify-content: space-around;
 }
-.hud-prefix {
+.quizStats-prefix {
     text-align: center;
 }
-.hud-main-text {
+.quizStats-main-text {
     color: #1f8fff;
     font-weight: bold;
     text-align: center;
@@ -140,6 +140,9 @@ h6 {
 }
 .hide { /* hide from view */
     display: none;
+}
+#finalScore {
+    color: #1f8fff;
 }
 #footer { /* footer style */
     width: 100%;

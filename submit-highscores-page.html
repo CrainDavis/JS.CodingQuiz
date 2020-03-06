@@ -14,30 +14,31 @@
     </head>
     <body>
         <div class="container">
-            <div id="highscore-page" class="flex-center flex-column">
-                <!--submit score section-->
-                <div class="scoreSubmit end">
-                    <!--section header-->
-                    <h1>SUBMIT SCORE</h1>
-                    <h3 id="finalScore">your score: <span style="color:#1f8fff;">0</span></h3>
-                    <!--input form for user's initials-->
-                    <form>
-                        <input type="name" class="form-input" id="name-input username" placeholder="your initials">
-                    </form>
-                    <br>
-                    <!--submission button-->
-                    <button type="submit" class="submit-btn btn" id="saveScoreBtn">SAVE SCORE</button>
-                    <br><br><hr><br>
-                    <!--play again button-->
-                    <a class="link-btn btn" href="index.html">PLAY AGAIN</a>
+            <!--submit score section-->
+            <div id="scoreSubmit-page">
+                <!--section header-->
+                <h1>SUBMIT SCORE</h1>
+                <div>
+                    <h3>your score: </h3>
+                    <h3 id="finalScore"></h3>
                 </div>
+                <!--input form for user's initials-->
+                <form>
+                    <input type="name" class="form-input" id="name-input username" placeholder="your name">
+                </form>
+                <br>
+                <!--submission button-->
+                <button type="submit" class="submit-btn btn" id="saveScoreBtn">SAVE SCORE</button>
+                <br><br><hr><br>
+                <!--play again button-->
+                <a class="link-btn btn" href="index.html">PLAY AGAIN</a>
             </div>
         </div>
-\        <!--footer (via Bootstrap)-->
+        <!--footer (via Bootstrap)-->
         <nav class="navbar fixed-bottom navbar-light" style="background-color: #e3f2fd;">
             <h6 id="footer">&copy; Chyna Davis</h6>
         </nav>
         <!--JavaScript link-->
-        <script src="assets/script.js"></script>
+        <script src="assets/submitHS.js"></script>
     </body>
 </html>

@@ -1,0 +1,1 @@
+// note: display username and score is <li> elements with the class "highscore-item" (for CSS purposes)

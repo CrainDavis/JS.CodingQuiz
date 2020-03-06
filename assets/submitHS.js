@@ -3,7 +3,7 @@ var finalScore = document.getElementById("finalScore");
 var usernameInput = document.getElementById("username");
 var saveScoreBtn = document.getElementById("saveScoreBtn");
 
-var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+var highScores = JSON.parse(localStorage.getItem("highscores")) || []; // sets to empty array if there are no scores in storage
 console.log(highScores);
 
 var userScore = localStorage.getItem("userScore"); // user score from local storage ...
@@ -22,3 +22,9 @@ saveScoreBtn.addEventListener("click", function(event) {
 
     return window.location.assign("view-highscores-page.html");
 });
+
+// =================================================================================
+// Resources:
+// James Q Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx".
+    // "Build a Quiz App (8) - Save High Scores in Local Storage"
+// class activity (04-Web-APIs) | Day03 | 23-Stu-Local-Storage-Objects

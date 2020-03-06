@@ -39,3 +39,7 @@ clearAllBtn.addEventListener("click", function(event) {
     localStorage.clear();
     highscoreList.innerHTML = [];
 });
+
+// =================================================================================
+// Resources:
+// class activity (04-Web-APIs) | Day03 | 28-Stu-Local-Storage-Todos

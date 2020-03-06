@@ -185,7 +185,7 @@ function setTime() {
 }
 
 function timePenalty() {
-    timeLeft = timeLeft - 4; // though the penalty is said to be -5 seconds in the instructions, I use -4 here because the setTimeout Function takes about a second to finish
+    timeLeft = timeLeft - 4; // though the penalty is said to be -5 seconds in the instructions, I use -4 here because the setTimeout Function takes about a second (rounded up) to finish
 }
 
 // =================================================================================

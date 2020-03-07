@@ -25,6 +25,6 @@ saveScoreBtn.addEventListener("click", function(event) {
 
 // =================================================================================
 // Resources:
-// James Q Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx".
+// James Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/".
     // "Build a Quiz App (8) - Save High Scores in Local Storage"
 // class activity (04-Web-APIs) | Day03 | 23-Stu-Local-Storage-Objects

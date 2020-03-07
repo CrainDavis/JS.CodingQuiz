@@ -190,7 +190,7 @@ function timePenalty() {
 
 // =================================================================================
 // Resources:
-// James Q Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx".
+// James Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/".
     // "Build a Quiz App (3) - Display Hard-Coded Questions"
     // "Build a Quiz App (4) - Display Feedback for Correct/Incorrect Answers"
     // "Build a Quiz App (5) - Create a Head's Up Display"

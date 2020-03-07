@@ -15,7 +15,7 @@ function renderHighscores() {
         var userScore = userScores[i];
     
         var li = document.createElement("li");
-        li.textContent = userScore[0] + " ----- " + userScore[1] + " points";
+        li.textContent = userScore[0] + " ----- " + userScore[1];
         li.setAttribute("data-index", i);
         li.classList.add("highscore-item");
     

@@ -129,6 +129,9 @@ h6 {
     outline: none;
 
 }
+.highscore-item:hover {
+    background-color: #78bbff;
+}
 .correct { /* quiz-page; button-color: correct */
     background-color: #00b31d;
 }

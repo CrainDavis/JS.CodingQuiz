@@ -1,7 +1,7 @@
 /////////////////////////////////// QUESTIONS ARRAY ///////////////////////////////////
 var questions = [
     {
-        question: "(+ * - / %)\nWhat are these symbols called?",
+        question: "(+ * - / %) : What are these symbols called?",
         choice1: "arithmetic operators",
         choice2: "arithmetic symbols",
         choice3: "mathematic signs",
@@ -33,11 +33,11 @@ var questions = [
         answer: 2
     },
     {
-        question: "When writing JavaScript within an HTML document, what kind of tag does it need to be in?",
-        choice1: "<head>",
-        choice2: "<java>",
-        choice3: "<script>",
-        choice4: "<action>",
+        question: "When writing JavaScript within an HTML document, what kind of tag does it need to be inside?",
+        choice1: "<head></head>",
+        choice2: "<java></java>",
+        choice3: "<script></script/>",
+        choice4: "<action></action>",
         answer: 3
     },
     {
@@ -45,19 +45,19 @@ var questions = [
         choice1: "debug.log();",
         choice2: "console.log();",
         choice3: "errors.show();",
-        choice4: "console.errors();",
+        choice4: "console.showErrors();",
         answer: 2
     },
     {
         question: "NaN means __?",
-        choice1: "error",
+        choice1: "null",
         choice2: "Not a Number",
         choice3: "Not Applicable Number",
-        choice4: "Need a Number",
+        choice4: "error",
         answer: 2
     },
     {
-        question: "In an if statement, the logical operator || represents __?",
+        question: "In an if statement, the logical operator ( || ) represents __?",
         choice1: "not",
         choice2: "and",
         choice3: "with",
@@ -115,7 +115,7 @@ setTime();
 // newQuestion Function: populates the inner text of the question and answer choices as the user goes through, increments the page-top stats, randomizes the question order and removes already-answered questions from array, ends the game after 10 questions, stores the user's score in local storage, and redirects the user to the submit highscores page
 function newQuestion() { 
     if(availableQuestions.length === 0 || questionCounter >= totalQuestions) {
-        localStorage.setItem("userScore", score);
+        localStorage.setItem("userScore", score + " points");
         return window.location.assign("submit-highscores-page.html");
     } 
 

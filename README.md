@@ -29,6 +29,12 @@ None is required.
 ## Usage:
 Go to [this link](https://craindavis.github.io/JS.CodingQuiz/) to play!
 
+How to use the application:
+* __step 1:__ On the main page (the page seen when the app is first loaded in the browser), read the game instructions and click the button saying "Start Code Quiz". You can also go to the _High Scores_ page and view all of the previously saved high scores.
+* __step 2:__ Answer each of the 10 multiple-choice questions. If the timer reaches 0, the page will redirect to the _Game Over_ page, where the user has the option to go back to the main page and play again.
+* __step 3:__ If all 10 questions are answered before the timer runs out, the page will redirect to the page where the user can submit their username and score to be recorded on the _High Scores_ page. Type in any kind of username (full name, first/last name, nickname, initials, etc.), and click the "Save Score" button. If you do not wish to save your high score, click the "Play Again" button, and you will be redirected to the main page.
+* __step 4:__ If you _do_ choose to record your score on the _High Scores_ page and click "Save Score", you will be taken to the _View High Scores_ page, where you can see all previous user scores that are saved in LocalStorage. On this page, you can then click "Play Again", which will take you back to the main page once more, or you can clear out all of the saves scores by clicking the "Clear All" button.
+
 ---
 
 ## Demonstration:

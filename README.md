@@ -32,6 +32,7 @@ Go to [this link](https://craindavis.github.io/JS.CodingQuiz/) to play!
 ---
 
 ## Demonstration:
+![demo](images/CodeQuiz.gif)
 
 ---
 

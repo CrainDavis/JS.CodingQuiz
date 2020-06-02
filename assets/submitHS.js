@@ -11,20 +11,14 @@ finalScore.innerText = userScore; // displayed on submit-highscores-page.html
 
 /////////////////////////////////// FUNCTIONS ///////////////////////////////////
 // function to make SaveScore Button work; when the user types their name into the input field and clicks "save", their name and score will be added to localStorage as values in an array, and the page will be redirected to the View Highscores page, where they will see their score listed
-saveScoreBtn.addEventListener("click", function(event) {
-    event.preventDefault();
+saveScoreBtn.addEventListener("click", function (event) {
+  event.preventDefault();
 
-    var userAndScore = [usernameInput.value, userScore];
+  var userAndScore = [usernameInput.value, userScore];
 
-    highScores.push(userAndScore);
+  highScores.push(userAndScore);
 
-    localStorage.setItem("highscores", JSON.stringify(highScores));
+  localStorage.setItem("highscores", JSON.stringify(highScores));
 
-    return window.location.assign("view-highscores-page.html");
+  return window.location.assign("view-highscores-page.html");
 });
-
-// =================================================================================
-// Resources:
-// James Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/".
-    // "Build a Quiz App (8) - Save High Scores in Local Storage"
-// class activity (04-Web-APIs) | Day03 | 23-Stu-Local-Storage-Objects

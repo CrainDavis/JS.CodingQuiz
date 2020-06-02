@@ -1,85 +1,87 @@
 /////////////////////////////////// QUESTIONS ARRAY ///////////////////////////////////
 var questions = [
-    {
-        question: "(+ * - / %) : What are these symbols called?",
-        choice1: "arithmetic operators",
-        choice2: "arithmetic symbols",
-        choice3: "mathematic signs",
-        choice4: "math symbols",
-        answer: 1
-    },
-    {
-        question: "Which of the following CANNOT be used to declare a variable?",
-        choice1: "let",
-        choice2: "set",
-        choice3: "var",
-        choice4: "const",
-        answer: 2
-    },
-    {
-        question: "Most JavaScript programmers use what kind of style to name variables?",
-        choice1: "alllowercase",
-        choice2: "spaced_apart",
-        choice3: "CapitalizeEach",
-        choice4: "camelCase",
-        answer: 4
-    },
-    {
-        question: "Which of the following is NOT a kind of loop?",
-        choice1: "for loop",
-        choice2: "when loop",
-        choice3: "while loop",
-        choice4: "do loop",
-        answer: 2
-    },
-    {
-        question: "When writing JavaScript within an HTML document, what kind of tag does it need to be inside?",
-        choice1: "<head></head>",
-        choice2: "<java></java>",
-        choice3: "<script></script/>",
-        choice4: "<action></action>",
-        answer: 3
-    },
-    {
-        question: "What is the preferred method to debug JavaScript code?",
-        choice1: "debug.log();",
-        choice2: "console.log();",
-        choice3: "errors.show();",
-        choice4: "console.showErrors();",
-        answer: 2
-    },
-    {
-        question: "NaN means __?",
-        choice1: "null",
-        choice2: "Not a Number",
-        choice3: "Not Applicable Number",
-        choice4: "error",
-        answer: 2
-    },
-    {
-        question: "In an if statement, the logical operator ( || ) represents __?",
-        choice1: "not",
-        choice2: "and",
-        choice3: "with",
-        choice4: "or",
-        answer: 4
-    },
-    {
-        question: "How does a programmer write comments in JavaScript?",
-        choice1: "//comment",
-        choice2: "<!--comment-->",
-        choice3: "/*comment*/",
-        choice4: "((comment))",
-        answer: 1
-    },
-    {
-        question: "Which CANNOT be used in a conditional statement?",
-        choice1: "if",
-        choice2: "else if",
-        choice3: "what if",
-        choice4: "else",
-        answer: 3
-    }
+  {
+    question: "(+ * - / %) : What are these symbols called?",
+    choice1: "arithmetic operators",
+    choice2: "arithmetic symbols",
+    choice3: "mathematic signs",
+    choice4: "math symbols",
+    answer: 1,
+  },
+  {
+    question: "Which of the following CANNOT be used to declare a variable?",
+    choice1: "let",
+    choice2: "set",
+    choice3: "var",
+    choice4: "const",
+    answer: 2,
+  },
+  {
+    question:
+      "Most JavaScript programmers use what kind of style to name variables?",
+    choice1: "alllowercase",
+    choice2: "spaced_apart",
+    choice3: "CapitalizeEach",
+    choice4: "camelCase",
+    answer: 4,
+  },
+  {
+    question: "Which of the following is NOT a kind of loop?",
+    choice1: "for loop",
+    choice2: "when loop",
+    choice3: "while loop",
+    choice4: "do loop",
+    answer: 2,
+  },
+  {
+    question:
+      "When writing JavaScript within an HTML document, what kind of tag does it need to be inside?",
+    choice1: "<head></head>",
+    choice2: "<java></java>",
+    choice3: "<script></script/>",
+    choice4: "<action></action>",
+    answer: 3,
+  },
+  {
+    question: "What is the preferred method to debug JavaScript code?",
+    choice1: "debug.log();",
+    choice2: "console.log();",
+    choice3: "errors.show();",
+    choice4: "console.showErrors();",
+    answer: 2,
+  },
+  {
+    question: "NaN means __?",
+    choice1: "null",
+    choice2: "Not a Number",
+    choice3: "Not Applicable Number",
+    choice4: "error",
+    answer: 2,
+  },
+  {
+    question: "In an if statement, the logical operator ( || ) represents __?",
+    choice1: "not",
+    choice2: "and",
+    choice3: "with",
+    choice4: "or",
+    answer: 4,
+  },
+  {
+    question: "How does a programmer write comments in JavaScript?",
+    choice1: "//comment",
+    choice2: "<!--comment-->",
+    choice3: "/*comment*/",
+    choice4: "((comment))",
+    answer: 1,
+  },
+  {
+    question: "Which CANNOT be used in a conditional statement?",
+    choice1: "if",
+    choice2: "else if",
+    choice3: "what if",
+    choice4: "else",
+    answer: 3,
+  },
 ];
 
 /////////////////////////////////// VARIABLES ///////////////////////////////////
@@ -100,11 +102,11 @@ var totalQuestions = 10; // total number of questions user will answer
 
 /////////////////////////////////// FUNCTIONS ///////////////////////////////////
 // startQuiz Function: sets the page-top questionCounter and score to 0, copies in questions from array, and calls on the newQuestion function
-function startQuiz() { 
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions]; 
-    newQuestion();
+function startQuiz() {
+  questionCounter = 0;
+  score = 0;
+  availableQuestions = [...questions];
+  newQuestion();
 }
 
 // call on startQuiz function
@@ -113,84 +115,77 @@ startQuiz();
 setTime();
 
 // newQuestion Function: populates the inner text of the question and answer choices as the user goes through, increments the page-top stats, randomizes the question order and removes already-answered questions from array, ends the game after 10 questions, stores the user's score in local storage, and redirects the user to the submit highscores page
-function newQuestion() { 
-    if(availableQuestions.length === 0 || questionCounter >= totalQuestions) {
-        localStorage.setItem("userScore", score + " points");
-        return window.location.assign("submit-highscores-page.html");
-    } 
+function newQuestion() {
+  if (availableQuestions.length === 0 || questionCounter >= totalQuestions) {
+    localStorage.setItem("userScore", score + " points");
+    return window.location.assign("submit-highscores-page.html");
+  }
 
-    questionCounter++;
-    questionCounterText.textContent = questionCounter + " / " + totalQuestions;
+  questionCounter++;
+  questionCounterText.textContent = questionCounter + " / " + totalQuestions;
 
-    var questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.textContent = currentQuestion.question;
+  var questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  question.textContent = currentQuestion.question;
 
-    choices.forEach( function(choice) {
-        var number = choice.dataset["number"]; 
-        choice.textContent = currentQuestion["choice" + number];
-    });
+  choices.forEach(function (choice) {
+    var number = choice.dataset["number"];
+    choice.textContent = currentQuestion["choice" + number];
+  });
 
-    availableQuestions.splice(questionIndex, 1);
+  availableQuestions.splice(questionIndex, 1);
 
-    acceptingAnswers = true;
-};
+  acceptingAnswers = true;
+}
 
 // answerChoices Function: uses a forEach function for the 4 answer choices; prevents user from clicking any answer choices before page finishes loading, changes the CSS color of the buttons to show whether user's choice was correct or incorrect, uses a setTimeout Function to make this color effect last for 0.2 seconds before calling the newQuestion Function. This function uses classes applied to decide whether the user's selected answer is correct or incorrect. The default is incorrect, and if the user chooses the correct answer, the answer's class will be changed through the classList.add() method. If the user selects the wrong answer, the class will remain as "incorrect", and the timePenalty function will be called, causing the timer to subtract 5 seconds.
-choices.forEach( function(choice) {
-    choice.addEventListener("click", function(e) {
-        if(!acceptingAnswers) return;
+choices.forEach(function (choice) {
+  choice.addEventListener("click", function (e) {
+    if (!acceptingAnswers) return;
 
-        acceptingAnswers = false;
-        var selectedChoice = e.target;
-        var selectedAnswer = selectedChoice.dataset["number"];
-        
-        var classToApply = "incorrect"; 
-            if(selectedAnswer == currentQuestion.answer) {
-                classToApply = "correct"; 
-            } else {
-                timePenalty();
-            }
+    acceptingAnswers = false;
+    var selectedChoice = e.target;
+    var selectedAnswer = selectedChoice.dataset["number"];
 
-        if(classToApply === "correct") { 
-            addToScore(correctScore); 
-        } 
+    var classToApply = "incorrect";
+    if (selectedAnswer == currentQuestion.answer) {
+      classToApply = "correct";
+    } else {
+      timePenalty();
+    }
 
-        selectedChoice.classList.add(classToApply); 
+    if (classToApply === "correct") {
+      addToScore(correctScore);
+    }
 
-        setTimeout(function() { 
-            selectedChoice.classList.remove(classToApply); 
-            newQuestion(); 
-        }, 200);
-    });
-})
+    selectedChoice.classList.add(classToApply);
+
+    setTimeout(function () {
+      selectedChoice.classList.remove(classToApply);
+      newQuestion();
+    }, 200);
+  });
+});
 
 // addToScore Function: increases the score in the page-top stats each time the user answers a question correctly
-function addToScore(points) { 
-    score += points; 
-    scoreText.textContent = score; 
+function addToScore(points) {
+  score += points;
+  scoreText.textContent = score;
 }
 
 // setTime Function: creates the timer in the page-top quiz stats and redirects to the GAMEOVER page if the timer reaches 0
 function setTime() {
-    var timerInterval = setInterval(function() {
-        timeLeft--; 
-        timeElement.textContent = timeLeft;
+  var timerInterval = setInterval(function () {
+    timeLeft--;
+    timeElement.textContent = timeLeft;
 
-        if(timeLeft === 0) { 
-            clearInterval(timerInterval); 
-            return window.location.assign("gameover-page.html"); 
-        }
-    }, 1000); // 1 Mississippi
+    if (timeLeft === 0) {
+      clearInterval(timerInterval);
+      return window.location.assign("gameover-page.html");
+    }
+  }, 1000); // 1 Mississippi
 }
 
 function timePenalty() {
-    timeLeft = timeLeft - 4; // though the penalty is said to be -5 seconds in the instructions, I use -4 here because the setTimeout Function takes about a second (rounded up) to finish
+  timeLeft = timeLeft - 4; // though the penalty is said to be -5 seconds in the instructions, I use -4 here because the setTimeout Function takes about a second (rounded up) to finish
 }
-
-// =================================================================================
-// Resources:
-// James Quick, "Build a Quiz App with HTML, CSS, and JavaScript", URL: "https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/".
-    // "Build a Quiz App (3) - Display Hard-Coded Questions"
-    // "Build a Quiz App (4) - Display Feedback for Correct/Incorrect Answers"
-    // "Build a Quiz App (5) - Create a Head's Up Display"

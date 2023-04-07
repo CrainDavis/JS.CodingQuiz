@@ -171,12 +171,3 @@ https://www.contributor-covenant.org/translations.
 * James Quick, "Build a Quiz App with HTML, CSS, and JavaScript".
     * [Udemy.com tutorial link](https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/)
 * [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-
----
-
-## Questions: 
-for any questions, please contact:
-
-![CrainDavis](https://avatars0.githubusercontent.com/u/59345254?v=4) 
-
-__[CrainDavis](https://github.com/CrainDavis)__ at chyna.davis11@gmail.com
